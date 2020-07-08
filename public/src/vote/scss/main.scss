@@ -1,0 +1,22 @@
+@import "./_vars";
+
+body{
+	margin: 0;
+}
+*{
+	box-sizing: border-box;
+	font-family: Roboto;
+}
+._Main{
+	display: flex;
+	@import "./Side";
+	@import "./Cont";
+	@media (max-width:500px) {
+		flex-direction: column;
+	}
+}
+i.FIcon{
+	margin-right: 5px;
+	position: relative;
+	top: 3px;
+}

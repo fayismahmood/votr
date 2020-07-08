@@ -1,0 +1,67 @@
+._cont{
+	width: calc(100% - 250px);
+	height: 100vh;
+	padding: 30px;
+	position: relative;
+	overflow: auto;
+	@media (max-width:500px) {
+		width: 100%;
+	}
+	&>h1{
+		width: 100%;
+	}
+	&>div{
+		align-self: center;
+		border-radius: 35px;
+		position: relative;
+		display: flex;
+		flex-direction:column;
+		justify-content:center;
+		@import "./_selVotr";
+		&>button{
+			border:none;
+			padding: 10px;
+			font-size: 18px;
+			text-transform: uppercase;
+			border-radius: 10px;
+			background: $pri;
+			color: $priFade;
+			cursor: pointer;
+			position: fixed;
+			bottom: 50px;
+			transform: translate(-50%,50%);
+			left: 50%;
+			animation:but .3s;
+			i{
+				font-size: 20px;
+			}
+			&:hover{
+				background: #3f0000;
+				transition:.3s;
+			}
+			@media (max-width:500px) {
+				display: flex;
+				flex-direction: column;
+				font-size: 15px;
+				i{
+					font-size: 60px;
+				}
+			}
+		}
+
+	}	
+}
+
+
+
+@keyframes but{
+	0%{
+		transform:scaleY(.5) translate(-50%,350%);
+		opacity:0;
+	}
+	100%{
+		transform:scaleY(1) translate(-50%,50%);
+		opacity:1;
+
+	}
+} 

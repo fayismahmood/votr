@@ -1,0 +1,96 @@
+$pri:#6d0a03;
+$fade:#d2b3b0;
+.Resul{
+    box-shadow: 0 5px 10px -5px gray; 
+    width: 80%;
+    h2{
+        margin: 20px;
+    }
+    h3{
+        margin:10px;
+    }
+    .cont{
+        padding: 20px;
+        .overView{
+            display: flex;
+            flex-direction: row;
+            &>div{
+                margin: 10px;
+                text-align: center;
+                div{
+                    font-size: 55px;
+                    font-weight: 900;
+                    box-shadow:0 5px 10px -4px gray;
+                    height: 80px;
+                    margin-top: 10px;
+                    border-radius: 10px;
+
+                }
+                span{
+                    padding:0 3px ;
+                    text-transform: uppercase;
+                }
+               
+            }
+        }
+        .fullResult{
+            box-shadow:0 5px 10px -4px $fade;
+            border-radius: 15px;
+            padding: 10px;
+            .secs{
+                //border: .5px solid $fade;
+            
+                //padding: 10px;
+                margin: 20px;
+                .sec{
+                    font-size: 18px;
+                    text-transform: uppercase;
+                }
+                .conts{
+                    padding: 10px;
+                    display: flex;
+                    overflow: auto;
+                    ._e_cant{
+                        transition: .3s;
+                        box-shadow:0 5px 10px -4px $fade;
+                        padding: 10px;
+                        width: 120px;
+                        border-radius: 10px;
+                        margin: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        position: relative;
+                        flex-shrink: 0;
+                        cursor: pointer;
+                        &:hover{
+                            box-shadow:0 5px 30px -10px #ff7575a1;
+                            transition: .3s;
+                            transform: scale(1.1);
+                        }
+                        img{
+                            height: 80px;
+                            border-radius: 10px;
+                        }
+                        .vote{
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            height: 50px;
+                            width: 50px;
+                            background-color: $pri;
+                            border-radius: 50%;
+                            text-align: center;
+                            color: $fade;
+                            line-height: 50px;
+                            font-size: 25px;
+                        }
+                        .email{
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

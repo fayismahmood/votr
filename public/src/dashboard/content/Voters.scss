@@ -1,0 +1,123 @@
+$pri:#6d0a03;
+$fade:#d2b3b0;
+
+.Voters{
+	width: 400px;
+	margin:10px;
+	.heading{
+		color:$pri;
+		padding: 10px;
+		text-transform: uppercase;
+		.addBut{
+			$s:25px;
+			color: $pri;
+			float: right;
+			border:none;
+			border-radius: 50%;
+			width: $s;
+			height:$s;
+			background: $fade;
+			cursor: pointer;
+			svg{
+				transform: translate(-30%, 8%);
+			}
+			&:hover{
+					background: white;
+					color: $fade;
+					transition:.5s;
+				}
+		}
+	}
+	._cont{
+		padding: 15px;
+		overflow: auto;
+		max-height: 200px;
+		box-shadow: black 0 10px 45px -20px;
+		._EVoters{
+			border-bottom: 1px solid $fade;
+			padding: 10px;
+			display: grid;
+			position:relative;
+			grid-template-columns: 60px auto;
+			grid-template-rows:20px 12px 12px;
+			grid-template-areas:"img name"
+								"img email"
+								"img link";
+			&:last-child{
+				margin-bottom: 20px
+			}
+			img{
+				grid-area:img;
+				width: 50px;
+				height: 50px;
+				border:solid $fade .5px;
+				border-radius: 10px;
+
+			}
+			a{
+				grid-area:link;
+				font-size: 10px;
+			}
+			._EVoters_name{
+				grid-area:name;
+				font-size: 20px;
+			}
+			._EVoters_email{
+				grid-area:email;
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+
+
+.Dia{
+	z-index: 10;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #bd8c8894;
+	height: 100%;
+	width: 100%;
+	.voter_adder{
+		display: flex;
+		flex-direction: column;
+		width: max-content;
+		padding: 10px;
+		background: white;
+		box-shadow: #6d0a03 3px 3px 14px -3px;
+		border-radius: 5px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		transform: translate(-50%,-50%);
+		input[type=text]{
+			border:none;
+			border-bottom: solid 2px $fade; 
+			padding: 8px;
+			&:focus{
+				border-bottom: solid 2px $pri; 
+				transition:.3s;
+			}
+		}
+		button{
+			border:none;
+				padding: 5px;
+				background: $fade;
+				cursor: pointer;
+				border-radius: 5px;
+				text-transform: uppercase;
+				&:hover{
+					background: $pri;
+					color: $fade;
+					transition:.5s;
+				}
+		}
+		*{
+			margin: 5px;
+			width: max-content;
+		}
+	}
+}

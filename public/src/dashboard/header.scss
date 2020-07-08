@@ -1,0 +1,33 @@
+$pri:#6d0a03;
+$fade:#d2b3b0;
+
+header{
+	height: 40px;
+	width: 100%;
+	position: fixed;
+	background: white;
+	box-shadow: $pri 3px 0px 5px -2px;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	&>.headeLine{
+		i{
+			svg{
+				width: 100px;
+				height: 40px;
+			}
+		}
+	}
+}
+
+body{
+
+}
+*{
+	box-sizing: border-box;
+	font-family: Roboto;
+	color: $pri;
+}
+img{
+	object-fit: cover;
+}

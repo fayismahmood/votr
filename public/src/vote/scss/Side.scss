@@ -1,0 +1,80 @@
+._Side{
+	width: 250px;
+	background: $pri;
+	height: 100vh;
+	color: $priFade;
+	padding: 20px;
+	justify-content:end;
+	display: flex;
+	flex-direction: column;
+	@media (max-width:500px) {
+		width: 100%;
+		position: relative;
+		justify-content: start;
+		height: 35vh;
+		border-radius:0 0 25px 25px;
+	}
+	.Heading{
+		i{
+			font-size: 80px;	
+		}
+		div{
+			font-size: 40px;
+			line-height:45px;
+			font-weight: 900;
+			@media (max-width:500px) {
+				display: inline-block;
+				font-size: 25px;
+				line-height:25px;
+			}
+		}
+	}
+	.userInfo{
+		display: flex;
+		background: #660207;
+		margin:30px -20px;
+		padding:10px 20px;
+		.Avath{
+			$w:40px;
+			background: $priFade;
+			height: $w;
+			width: $w;
+			border-radius: 50%;
+			margin-right: 10px;
+		}
+		div{
+			font-size: 20px;
+			line-height: 20px;
+			span{
+				font-size: 15px;
+
+			}
+		}
+		@media (max-width:500px) {
+			font-size: small;
+			position: absolute;
+			padding: 5px;
+			right: 10px;
+			top: 10px;
+			margin: 0;
+			border-radius: 10px;
+			.Avath{
+				$w:30px;
+				background: $priFade;
+				height: $w;
+				width: $w;
+				border-radius: 50%;
+				margin-right: 5px;
+			}
+			div{
+				font-size: 15px;
+				line-height: 15px;
+				span{
+					font-size: 10px;
+	
+				}
+			}
+			
+		}
+	}
+}
