@@ -23,7 +23,7 @@ export default class Conts extends React.Component {
 
 	}
 	async componentWillMount() {
-		var _data = await postData('http://localhost:3000/Setting', { user: "ft" })
+		var _data = await postData('./Setting', { user: "ft" })
 		var Cont = _data.Cont
 		var sec= _data.sec;
 		this.setState({
@@ -55,7 +55,7 @@ export default class Conts extends React.Component {
 	}
 	addVoter(data:any) {
 		console.log(data)
-		postData('http://localhost:3000/addCont', { user: "ft", name: data.name, email: data.email, img: data.img,sec:data.sec })
+		postData('./addCont', { user: "ft", name: data.name, email: data.email, img: data.img,sec:data.sec })
 			.then(cb => {
 				var _Cont = this.state.Cont.slice()
 				_Cont.push(data)

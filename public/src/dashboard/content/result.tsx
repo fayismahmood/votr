@@ -19,7 +19,7 @@ export default class Result extends React.Component{
         this.showArr=this.showArr.bind(this)
     }
     async componentWillMount(){
-        postData('http://localhost:3000/countVote', { user: "ft"})
+        postData('./countVote', { user: "ft"})
           .then(data => {
             this.setState({
                 result:data.data

@@ -26,7 +26,7 @@ export default class Voters extends React.Component{
 
 	}
 	async componentWillMount(){
-		var _data = await postData('http://localhost:3000/Setting', { user: "ft" })
+		var _data = await postData('./Setting', { user: "ft" })
 		var Voters = _data.voters
 		this.setState({
 			Voters
@@ -52,7 +52,7 @@ export default class Voters extends React.Component{
 					<div className="_EVoters_email">
 						{e.email}
 					</div>
-					 <a href={"http://localhost:3000/vote/" + jsonwebtoken.sign({"name": e.name, "email": e.email }, 'shhhhh') }>open your link</a>
+					 <a href={"./vote/" + jsonwebtoken.sign({"name": e.name, "email": e.email }, 'shhhhh') }>open your link</a>
 					<div>
 					</div>
 				</div>
@@ -62,7 +62,7 @@ export default class Voters extends React.Component{
 			
 	}
 	addVoter(data){
-		postData('http://localhost:3000/addVoter', { user: "ft", name: data.name, email: data.email,img:data.img })
+		postData('./addVoter', { user: "ft", name: data.name, email: data.email,img:data.img })
 			.then(cb => {
 				var _Voters = this.state.Voters.slice()
 				_Voters.push(data)

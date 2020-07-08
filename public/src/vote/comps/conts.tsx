@@ -43,7 +43,7 @@ export default class Conts extends React.Component{
 		
 	}
 	async componentWillMount() {
-		var _data = await postData('http://localhost:3000/Setting', { user: "ft" })
+		var _data = await postData('./Setting', { user: "ft" })
 		var Cont = _data.Cont
 		var sec= _data.sec;
 		
@@ -84,7 +84,7 @@ export default class Conts extends React.Component{
 
 					{this.state.AllVoted &&
 					<button onClick={()=>{
-						postData('http://localhost:3000/addVote', { user: "ft", voter: V_data.email, votes:this.state.Vots })
+						postData('./addVote', { user: "ft", voter: V_data.email, votes:this.state.Vots })
 							.then(data => {
 								alert("You Succssfully voted")
 								// JSON data parsed by `response.json()` call

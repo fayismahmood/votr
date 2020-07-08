@@ -38,7 +38,7 @@ class Setting extends React.Component {
 			_vals.push(this.state._data[_e])
 		}
 		
-		postData('http://localhost:3000/update', { user:"ft",obj:_keys,objVal:_vals })
+		postData('./update', { user:"ft",obj:_keys,objVal:_vals })
           .then(data => {
             console.log(data); 
           });
@@ -66,7 +66,7 @@ class Setting extends React.Component {
 	}
 
 	async componentWillMount() {
-		var _data = await postData('http://localhost:3000/Setting', { user: "ft" })
+		var _data = await postData('./Setting', { user: "ft" })
 		this.setState({
 			_data
 		})
@@ -94,7 +94,7 @@ class Setting extends React.Component {
 				
 				btn.onclick=()=>{
 					
-						postData('http://localhost:3000/addSec', { user: "ft",sec:input.value})
+						postData('./addSec', { user: "ft",sec:input.value})
 						  .then(data => {
 						    console.log(data);
 							var N_sec=this.state._data.sec.slice()
