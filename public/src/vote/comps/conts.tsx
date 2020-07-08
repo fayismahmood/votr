@@ -84,7 +84,7 @@ export default class Conts extends React.Component{
 
 					{this.state.AllVoted &&
 					<button onClick={()=>{
-						postData('./addVote', { user: "ft", voter: V_data.email, votes:this.state.Vots })
+						postData('../addVote', { user: "ft", voter: V_data.email, votes:this.state.Vots })
 							.then(data => {
 								alert("You Succssfully voted")
 								// JSON data parsed by `response.json()` call
