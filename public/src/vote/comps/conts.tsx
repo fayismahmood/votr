@@ -43,7 +43,7 @@ export default class Conts extends React.Component{
 		
 	}
 	async componentWillMount() {
-		var _data = await postData('./Setting', { user: "ft" })
+		var _data = await postData('../Setting', { user: "ft" })
 		var Cont = _data.Cont
 		var sec= _data.sec;
 		
